@@ -175,6 +175,7 @@ client.on('message', async message => {
             await client.sendMessage(from, 'Share this link with your friends!');
             await client.sendMessage(from, 'Here you dash board link:\n https://referaltesting.netlify.app/dashboard?id='+from);
         } catch (err) {
+            console.error(err.message || err);
             await client.sendMessage(from, '⚠️ Could not generate referral link. Please try again later.');
         }
         return;
