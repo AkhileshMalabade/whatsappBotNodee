@@ -146,18 +146,7 @@ client.on('message', async message => {
         
                 await client.sendMessage(from, 'Hello '+res.data.referalName+'\n✅ Referral code verified!\nWould you like to invite your friends? Reply with: yes');
                 console.log(`🔍 Referral code verified for: ${res.data.refererwhatsapp}`);
-                await client.sendMessage(res.data.refererwhatsapp, `धन्यवाद! तुम्ही ${res.data.name} यांना रेफर केल्याबद्दल आमच्याकडून मनःपूर्वक आभार!\n
-
-केवळ 25 रेफरल पूर्ण करा आणि मिळवा एक सुंदर लेडीज बॅग गिफ्ट म्हणून! 🎁👜\n
-
-तुमच्या प्रियजनांना लोले ज्वेलर्समध्ये खरेदीसाठी रेफर करा आणि खालील फायदे मिळवा:\n
-✨ गिफ्ट्स\n
-✨ Loyalty Points (जेव्हा रेफर केलेली व्यक्ती खरेदी करते)\n
-
-आजच रेफरल सुरू करा आणि खास सन्मान मिळवा!\n
-#लोलेज्वेलर्स #\n
-Blue/s/Sharlink.com\n
-                    `);
+                await client.sendMessage(res.data.refererwhatsapp, 'Hello '+res.data.name+'✅ Your referral code has been verified successfully!');
             } else {
                 // You may also want to handle non-success response gracefully
                 await client.sendMessage(from, '❌ Invalid referral code. Please check again.');
