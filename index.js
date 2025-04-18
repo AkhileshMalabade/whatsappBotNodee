@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 const port = 3000;
+const axios = require('axios');
 
 // Middleware
 app.use(bodyParser.json());
@@ -135,28 +136,42 @@ client.on('message', async message => {
     }
 
     // 1. Handle "verify referral code: xyz"
-    if (msg.toLowerCase().startsWith('verify referral code:')) {
-        const code = msg.split(':')[1].trim();
+    if (msg.startsWith('verify referral code:')) {
+        const code = message.body.split(':')[1].trim();
         try {
+            console.log(`🔍 Verifying referral code: ${code}`);
             const res = await axios.get(`http://referal-production-0e45.up.railway.app/validate-referral?referralCode=${code}`);
+            
             if (res.data.status === 'success') {
+                await delay(2000); // waits properly now
                 await client.sendMessage(from, '✅ Referral code verified!\nWould you like to invite your friends? Reply with: yes');
-                awaitingInviteResponse.set(from, true);
+        
+            } else {
+                // You may also want to handle non-success response gracefully
+                await client.sendMessage(from, '❌ Invalid referral code. Please check again.');
             }
         } catch (err) {
+            console.error("Referral code verification error:", err.message || err);
             await client.sendMessage(from, '❌ Invalid referral code. Please check again.');
         }
+        
         return;
     }
+
+    function delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    
      
     // 2. Handle "yes" after referral validation
     if (msg.toLowerCase() === 'yes') {
         try {
             const res = await axios.get(`http://referal-production-0e45.up.railway.app/generate-code?whats=${whatsappNumber}`);
             const referralCode = res.data.referralCode;
-            const referralLink = `https://your-angular-site.com?ref=${referralCode}`;
-            await client.sendMessage(from, `🎉 Here’s your referral link:\n${referralLink}`);
-            awaitingInviteResponse.delete(from); // Clear state
+            const referralLink = `https://referaltesting.netlify.app/?ref=${referralCode}`;
+            await client.sendMessage(from, `🎉Invitation link:\n${referralLink}`);
+            await client.sendMessage(from, 'Share this link with your friends!');
+            await client.sendMessage(from, 'Here you dash board link:\n https://referaltesting.netlify.app/dashboard?id='+from);
         } catch (err) {
             await client.sendMessage(from, '⚠️ Could not generate referral link. Please try again later.');
         }
