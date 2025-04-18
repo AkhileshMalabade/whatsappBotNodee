@@ -140,12 +140,12 @@ client.on('message', async message => {
         const code = message.body.split(':')[1].trim();
         try {
             console.log(`🔍 Verifying referral code: ${code}`);
-            const res = await axios.get(`https://referal-production-0e45.up.railway.app/validate-referral?referralCode=${code}&whats=${whatsappNumber}`);
+            const res = await axios.get(`https://referal-production-0e45.up.railway.app/validate-referral?referralCode=${code}&whatsapp=${whatsappNumber}`);
             await delay(2000); // waits properly now
             if (res.data != null) {
         
                 await client.sendMessage(from, 'Hello '+res.data.referalName+'\n✅ Referral code verified!\nWould you like to invite your friends? Reply with: yes');
-                await client.sendMessage(res.data.refererwhatsapp, `धन्यवाद! तुम्ही ${res.data.referalName} यांना रेफर केल्याबद्दल आमच्याकडून मनःपूर्वक आभार!\n
+                await client.sendMessage(res.data.refererwhatsapp, `धन्यवाद! तुम्ही ${res.data.name} यांना रेफर केल्याबद्दल आमच्याकडून मनःपूर्वक आभार!\n
 
 केवळ 25 रेफरल पूर्ण करा आणि मिळवा एक सुंदर लेडीज बॅग गिफ्ट म्हणून! 🎁👜\n
 
