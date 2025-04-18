@@ -166,7 +166,7 @@ client.on('message', async message => {
     // 2. Handle "yes" after referral validation
     if (msg.toLowerCase() === 'yes') {
         try {
-            const res = await axios.get(`http://referal-production-0e45.up.railway.app/generate-code?whats=${from}`);
+            const res = await axios.get(`https://referal-production-0e45.up.railway.app/generate-code?whats=${from}`);
             console.log(`🔗 Generated referral code: ${res.data.referralCode}`);
             await delay(2000); // waits properly now
             const referralCode = res.data.referralCode;
