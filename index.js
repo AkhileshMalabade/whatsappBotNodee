@@ -141,9 +141,9 @@ client.on('message', async message => {
         try {
             console.log(`🔍 Verifying referral code: ${code}`);
             const res = await axios.get(`http://referal-production-0e45.up.railway.app/validate-referral?referralCode=${code}`);
-            
+            await delay(2000); // waits properly now
             if (res.data.status === 'success') {
-                await delay(2000); // waits properly now
+        
                 await client.sendMessage(from, '✅ Referral code verified!\nWould you like to invite your friends? Reply with: yes');
         
             } else {
@@ -167,6 +167,7 @@ client.on('message', async message => {
     if (msg.toLowerCase() === 'yes') {
         try {
             const res = await axios.get(`http://referal-production-0e45.up.railway.app/generate-code?whats=${from}`);
+            await delay(2000); // waits properly now
             const referralCode = res.data.referralCode;
             const referralLink = `https://referaltesting.netlify.app/?ref=${referralCode}`;
             await client.sendMessage(from, `🎉Invitation link:\n${referralLink}`);
