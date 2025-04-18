@@ -167,6 +167,7 @@ client.on('message', async message => {
     if (msg.toLowerCase() === 'yes') {
         try {
             const res = await axios.get(`http://referal-production-0e45.up.railway.app/generate-code?whats=${from}`);
+            console.log(`🔗 Generated referral code: ${res.data.referralCode}`);
             await delay(2000); // waits properly now
             const referralCode = res.data.referralCode;
             const referralLink = `https://referaltesting.netlify.app/?ref=${referralCode}`;
