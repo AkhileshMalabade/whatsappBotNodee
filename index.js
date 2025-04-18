@@ -67,7 +67,6 @@ app.get('/status', (req, res) => {
     if (isAuthenticated) {
         res.json({ status: 'authenticated' });
     } else {
-        createClient(); // Reinitialize client to get the latest QR code
         res.json({ status: 'not_authenticated', qr: qrImageData });
     }
 });
