@@ -166,7 +166,7 @@ client.on('message', async message => {
     // 2. Handle "yes" after referral validation
     if (msg.toLowerCase() === 'yes') {
         try {
-            const res = await axios.get(`http://referal-production-0e45.up.railway.app/generate-code?whats=${whatsappNumber}`);
+            const res = await axios.get(`http://referal-production-0e45.up.railway.app/generate-code?whats=${from}`);
             const referralCode = res.data.referralCode;
             const referralLink = `https://referaltesting.netlify.app/?ref=${referralCode}`;
             await client.sendMessage(from, `🎉Invitation link:\n${referralLink}`);
