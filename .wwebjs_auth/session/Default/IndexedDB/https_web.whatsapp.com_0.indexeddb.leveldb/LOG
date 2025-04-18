@@ -1,0 +1,63 @@
+2025/04/18-12:13:05.615 13bc Reusing MANIFEST D:\WhatsappBot\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/04/18-12:13:05.616 13bc Recovering log #1663
+2025/04/18-12:13:05.756 13bc Reusing old log D:\WhatsappBot\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/001663.log 
+2025/04/18-12:13:07.411 3a98 Level-0 table #1689: started
+2025/04/18-12:13:07.430 3a98 Level-0 table #1689: 1057751 bytes OK
+2025/04/18-12:13:07.431 3a98 Delete type=0 #1663
+2025/04/18-12:13:07.432 3a98 Manual compaction at level-0 from '\x00\x8e\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x8f\x00\x00\x00' @ 0 : 0; will stop at '\x00\x8e\x00\x00\x05' @ 4621744 : 1
+2025/04/18-12:13:07.432 3a98 Compacting 1@0 + 0@1 files
+2025/04/18-12:13:07.457 3a98 Generated table #1690@0: 14386 keys, 268505 bytes
+2025/04/18-12:13:07.464 3a98 Generated table #1691@0: 2627 keys, 162399 bytes
+2025/04/18-12:13:07.464 3a98 Compacted 1@0 + 0@1 files => 430904 bytes
+2025/04/18-12:13:07.465 3a98 compacted to: files[ 0 2 21 0 0 0 0 ]
+2025/04/18-12:13:07.465 3a98 Delete type=2 #1689
+2025/04/18-12:13:07.466 3a98 Manual compaction at level-0 from '\x00\x8e\x00\x00\x05' @ 4621744 : 1 .. '\x00\x8f\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/04/18-12:13:09.616 a38 Compacting 1@1 + 11@2 files
+2025/04/18-12:13:09.703 a38 Generated table #1692@1: 30585 keys, 2254063 bytes
+2025/04/18-12:13:09.797 a38 Generated table #1693@1: 31556 keys, 2217110 bytes
+2025/04/18-12:13:09.850 a38 Generated table #1694@1: 18075 keys, 2162828 bytes
+2025/04/18-12:13:09.884 a38 Generated table #1695@1: 3289 keys, 2123582 bytes
+2025/04/18-12:13:09.983 a38 Generated table #1696@1: 66529 keys, 2208804 bytes
+2025/04/18-12:13:10.101 a38 Generated table #1697@1: 108427 keys, 2260486 bytes
+2025/04/18-12:13:10.224 a38 Generated table #1698@1: 109093 keys, 2260647 bytes
+2025/04/18-12:13:10.346 a38 Generated table #1699@1: 109094 keys, 2261550 bytes
+2025/04/18-12:13:10.520 a38 Generated table #1700@1: 109232 keys, 2259925 bytes
+2025/04/18-12:13:10.601 a38 Generated table #1701@1: 78887 keys, 1654646 bytes
+2025/04/18-12:13:10.601 a38 Compacted 1@1 + 11@2 files => 21663641 bytes
+2025/04/18-12:13:10.601 a38 compacted to: files[ 0 1 20 0 0 0 0 ]
+2025/04/18-12:13:10.602 a38 Delete type=2 #1657
+2025/04/18-12:13:10.602 a38 Delete type=2 #1667
+2025/04/18-12:13:10.602 a38 Delete type=2 #1668
+2025/04/18-12:13:10.602 a38 Delete type=2 #1669
+2025/04/18-12:13:10.602 a38 Delete type=2 #1670
+2025/04/18-12:13:10.602 a38 Delete type=2 #1671
+2025/04/18-12:13:10.602 a38 Delete type=2 #1672
+2025/04/18-12:13:10.602 a38 Delete type=2 #1673
+2025/04/18-12:13:10.602 a38 Delete type=2 #1674
+2025/04/18-12:13:10.602 a38 Delete type=2 #1675
+2025/04/18-12:13:10.602 a38 Delete type=2 #1676
+2025/04/18-12:13:10.602 a38 Delete type=2 #1691
+2025/04/18-12:13:10.733 a38 Compacting 1@1 + 10@2 files
+2025/04/18-12:13:10.800 a38 Generated table #1702@1: 49351 keys, 2205966 bytes
+2025/04/18-12:13:10.849 a38 Generated table #1703@1: 30492 keys, 2193119 bytes
+2025/04/18-12:13:10.931 a38 Generated table #1704@1: 67616 keys, 2231507 bytes
+2025/04/18-12:13:11.007 a38 Generated table #1705@1: 55274 keys, 2225032 bytes
+2025/04/18-12:13:11.029 a38 Generated table #1706@1: 6704 keys, 2139596 bytes
+2025/04/18-12:13:11.044 a38 Generated table #1707@1: 358 keys, 2131370 bytes
+2025/04/18-12:13:11.058 a38 Generated table #1708@1: 680 keys, 2130398 bytes
+2025/04/18-12:13:11.077 a38 Generated table #1709@1: 1559 keys, 2143434 bytes
+2025/04/18-12:13:11.098 a38 Generated table #1710@1: 2512 keys, 2149699 bytes
+2025/04/18-12:13:11.121 a38 Generated table #1711@1: 3750 keys, 1987715 bytes
+2025/04/18-12:13:11.121 a38 Compacted 1@1 + 10@2 files => 21537836 bytes
+2025/04/18-12:13:11.122 a38 compacted to: files[ 0 0 20 0 0 0 0 ]
+2025/04/18-12:13:11.122 a38 Delete type=2 #1677
+2025/04/18-12:13:11.122 a38 Delete type=2 #1678
+2025/04/18-12:13:11.122 a38 Delete type=2 #1679
+2025/04/18-12:13:11.122 a38 Delete type=2 #1680
+2025/04/18-12:13:11.122 a38 Delete type=2 #1681
+2025/04/18-12:13:11.122 a38 Delete type=2 #1682
+2025/04/18-12:13:11.123 a38 Delete type=2 #1683
+2025/04/18-12:13:11.123 a38 Delete type=2 #1684
+2025/04/18-12:13:11.123 a38 Delete type=2 #1685
+2025/04/18-12:13:11.123 a38 Delete type=2 #1686
+2025/04/18-12:13:11.123 a38 Delete type=2 #1690

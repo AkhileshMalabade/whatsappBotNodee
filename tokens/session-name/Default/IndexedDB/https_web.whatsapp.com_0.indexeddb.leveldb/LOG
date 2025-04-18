@@ -1,0 +1,32 @@
+2025/04/18-11:58:12.770 602c Reusing MANIFEST D:\WhatsappBot\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/04/18-11:58:12.771 602c Recovering log #1008
+2025/04/18-11:58:12.800 602c Reusing old log D:\WhatsappBot\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/001008.log 
+2025/04/18-11:58:15.782 528c Level-0 table #1021: started
+2025/04/18-11:58:15.798 528c Level-0 table #1021: 922457 bytes OK
+2025/04/18-11:58:15.800 528c Delete type=0 #1008
+2025/04/18-11:58:15.801 528c Manual compaction at level-0 from '\x00!\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00"\x00\x00\x00' @ 0 : 0; will stop at '\x00!\x00\x00\x05' @ 3827374 : 1
+2025/04/18-11:58:15.801 528c Compacting 1@0 + 0@1 files
+2025/04/18-11:58:15.813 528c Generated table #1022@0: 14727 keys, 226240 bytes
+2025/04/18-11:58:15.823 528c Generated table #1023@0: 4759 keys, 292136 bytes
+2025/04/18-11:58:15.823 528c Compacted 1@0 + 0@1 files => 518376 bytes
+2025/04/18-11:58:15.824 528c compacted to: files[ 0 2 21 0 0 0 0 ]
+2025/04/18-11:58:15.825 528c Delete type=2 #1021
+2025/04/18-11:58:15.828 528c Manual compaction at level-0 from '\x00!\x00\x00\x05' @ 3827374 : 1 .. '\x00"\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/04/18-11:58:17.421 602c Compacting 1@1 + 4@2 files
+2025/04/18-11:58:17.501 602c Generated table #1024@1: 47576 keys, 2207217 bytes
+2025/04/18-11:58:17.566 602c Generated table #1025@1: 35870 keys, 2195336 bytes
+2025/04/18-11:58:17.638 602c Generated table #1026@1: 70468 keys, 2240364 bytes
+2025/04/18-11:58:17.674 602c Generated table #1027@1: 28873 keys, 1921333 bytes
+2025/04/18-11:58:17.674 602c Compacted 1@1 + 4@2 files => 8564250 bytes
+2025/04/18-11:58:17.674 602c compacted to: files[ 0 1 21 0 0 0 0 ]
+2025/04/18-11:58:17.675 602c Delete type=2 #1015
+2025/04/18-11:58:17.675 602c Delete type=2 #1016
+2025/04/18-11:58:17.675 602c Delete type=2 #1017
+2025/04/18-11:58:17.675 602c Delete type=2 #1018
+2025/04/18-11:58:17.675 602c Delete type=2 #1022
+2025/04/18-11:58:24.258 602c Compacting 1@1 + 2@2 files
+2025/04/18-11:58:24.310 602c Generated table #1028@1: 28140 keys, 2241787 bytes
+2025/04/18-11:58:24.345 602c Generated table #1029@1: 25296 keys, 2181834 bytes
+2025/04/18-11:58:24.346 602c Generated table #1030@1: 3 keys, 2413 bytes
+2025/04/18-11:58:24.346 602c Compacted 1@1 + 2@2 files => 4426034 bytes
+2025/04/18-11:58:24.347 602c compacted to: files[ 0 0 22 0 0 0 0 ]
