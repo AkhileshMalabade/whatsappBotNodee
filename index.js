@@ -140,12 +140,23 @@ client.on('message', async message => {
         const code = message.body.split(':')[1].trim();
         try {
             console.log(`🔍 Verifying referral code: ${code}`);
-            const res = await axios.get(`http://referal-production-0e45.up.railway.app/validate-referral?referralCode=${code}`);
+            const res = await axios.get(`https://referal-production-0e45.up.railway.app/validate-referral?referralCode=${code}&whats=${whatsappNumber}`);
             await delay(2000); // waits properly now
-            if (res.data.status === 'success') {
+            if (res.data != null) {
         
-                await client.sendMessage(from, '✅ Referral code verified!\nWould you like to invite your friends? Reply with: yes');
-        
+                await client.sendMessage(from, 'Hello '+res.data.referalName+'\n✅ Referral code verified!\nWould you like to invite your friends? Reply with: yes');
+                await client.sendMessage(res.data.refererwhatsapp, `धन्यवाद! तुम्ही ${res.data.referalName} यांना रेफर केल्याबद्दल आमच्याकडून मनःपूर्वक आभार!\n
+
+केवळ 25 रेफरल पूर्ण करा आणि मिळवा एक सुंदर लेडीज बॅग गिफ्ट म्हणून! 🎁👜\n
+
+तुमच्या प्रियजनांना लोले ज्वेलर्समध्ये खरेदीसाठी रेफर करा आणि खालील फायदे मिळवा:\n
+✨ गिफ्ट्स\n
+✨ Loyalty Points (जेव्हा रेफर केलेली व्यक्ती खरेदी करते)\n
+
+आजच रेफरल सुरू करा आणि खास सन्मान मिळवा!\n
+#लोलेज्वेलर्स #\n
+Blue/s/Sharlink.com\n
+                    `);
             } else {
                 // You may also want to handle non-success response gracefully
                 await client.sendMessage(from, '❌ Invalid referral code. Please check again.');
