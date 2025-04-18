@@ -149,7 +149,7 @@ client.on('message', async message => {
                 await client.sendMessage(res.data.refererwhatsapp, 'Hello '+res.data.name+'✅ Your referral code has been verified successfully!');
             } else {
                 // You may also want to handle non-success response gracefully
-                await client.sendMessage(from, '❌ Invalid referral code. Please check again.');
+                await client.sendMessage(from, '❌ Invalid referral code. Please check again.hfsdfds');
             }
         } catch (err) {
             console.error("Referral code verification error:", err.message || err);
