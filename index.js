@@ -143,10 +143,10 @@ client.on('message', async message => {
             const res = await axios.get(`https://referal-production-0e45.up.railway.app/validate-referral?referralCode=${code}&whatsapp=${whatsappNumber}`);
             await delay(2000); // waits properly now
             if (res.data != null) {
-        
+                let refererwhatsapp = res.data.refererwhatsapp;
                 await client.sendMessage(from, 'Hello '+res.data.referalName+'\n✅ Referral code verified!\nWould you like to invite your friends? Reply with: yes');
-                console.log(`🔍 Referral code verified for: ${res.data.refererwhatsapp}`);
-                await client.sendMessage(res.data.refererwhatsapp, 'Hello '+res.data.name+'✅ Your referral code has been verified successfully!');
+                console.log(`🔍 Referral code verified for: ${refererwhatsapp}`);
+                await client.sendMessage(refererwhatsapp.toString(), 'Hello '+res.data.name+'✅ Your referral code has been verified successfully!');
             } else {
                 // You may also want to handle non-success response gracefully
                 await client.sendMessage(from, '❌ Invalid referral code. Please check again.hfsdfds');
