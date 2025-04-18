@@ -146,7 +146,7 @@ client.on('message', async message => {
         
                 await client.sendMessage(from, 'Hello '+res.data.referalName+'\n✅ Referral code verified!\nWould you like to invite your friends? Reply with: yes');
                 console.log(`🔍 Referral code verified for: ${res.data.refererwhatsapp}`);
-                await client.sendMessage(res.data.refererwhatsapp.toString()+'@c.us', `धन्यवाद! तुम्ही ${res.data.name} यांना रेफर केल्याबद्दल आमच्याकडून मनःपूर्वक आभार!\n
+                await client.sendMessage(res.data.refererwhatsapp.toString()+'@c.us', `धन्यवाद! ${res.data.name} तुम्ही ${res.data.referalName} यांना रेफर केल्याबद्दल आमच्याकडून मनःपूर्वक आभार!\n
 
 केवळ 25 रेफरल पूर्ण करा आणि मिळवा एक सुंदर लेडीज बॅग गिफ्ट म्हणून! 🎁👜\n
 
